@@ -89,19 +89,3 @@ public class Task implements Comparable<Task> {
         return 0;
     }
 }
-
-class ComparatorCategory implements Comparator <Task>{
-
-    @Override
-    public int compare(Task o1, Task o2) {
-        return o1.getCategory().compareToIgnoreCase(o2.getCategory());
-    }
-}
-
-class ComparatorStatus implements Comparator <Task>{
-
-    @Override
-    public int compare(Task o1, Task o2) {
-        return o1.getStatus().compareToIgnoreCase(o2.getStatus());
-    }
-}
