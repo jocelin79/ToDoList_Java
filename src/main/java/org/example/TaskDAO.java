@@ -7,9 +7,10 @@ public class TaskDAO {
     String driver = 'org.postgresql.Driver'
     Sql sql = Sql.newInstance(url, user, password, driver)
 
-    List<Candidato> listar() {
+    /**List<Candidato> listar() {
         List<Candidato> retorno = new ArrayList<>();
         sql.query('SELECT * FROM candidato') { resultSet ->
+            jdk.nashorn.internal.ir.LexicalContext.NodeIterator<jdk.nashorn.internal.ir.LexicalContextNode> resultSet;
             while (resultSet.next()) {
                 Candidato candidato = new Candidato()
                 candidato.setId(resultSet.getInt("id"))
@@ -48,4 +49,4 @@ public class TaskDAO {
         sql.execute deleteSql, params
         return true
     }
-}
+}**/
