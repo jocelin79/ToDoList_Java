@@ -10,9 +10,10 @@ public class ManipuladorArquivo {
   public static void leitor(String path) throws IOException {
     BufferedReader buffRead = new BufferedReader(new FileReader(path));
     String linha = "";
+    List <String> taskList = new ArrayList<>(); 
     while (true) {
       if (linha != null) {
-        System.out.println(linha);
+        taskList.add(linha);
       } else break;
       linha = buffRead.readLne();
     }
