@@ -1,16 +1,16 @@
 package org.example;
 
-public class TaskDAO {
-    String url = 'jdbc:postgresql://localhost:5432/linketinderdb'
-    String user = 'postgres'
-    String password = 'postgres'
-    String driver = 'org.postgresql.Driver'
-    Sql sql = Sql.newInstance(url, user, password, driver)
+import java.util.ArrayList;
+import java.util.List;
 
-    /**public static List<Task> listar() {
+public class TaskDAO {
+
+    public static List<Task> listar() {
         List<Task> retorno = new ArrayList<>();
         !-- resgatar a lista de tasks da doc --! https://www.devmedia.com.br/leitura-e-escrita-de-arquivos-de-texto-em-java/25529
-        
+
+
+
         sql.query('SELECT * FROM candidato') { resultSet ->
             jdk.nashorn.internal.ir.LexicalContext.NodeIterator<jdk.nashorn.internal.ir.LexicalContextNode> resultSet;
             while (resultSet.next()) {
@@ -51,4 +51,4 @@ public class TaskDAO {
         sql.execute deleteSql, params
         return true
     }
-}**/
+}
